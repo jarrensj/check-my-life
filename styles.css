@@ -1,0 +1,31 @@
+.square {
+  width: 2%;
+  height: 2%;
+  background: purple;
+  padding-bottom:2%;
+  float: left;
+  margin: 0.25%;
+}
+
+.completed {
+  width: 2%;
+  height: 2%;
+  background: black;
+  padding-bottom:2%;
+  float: left;
+  margin: 0.25%;
+}
+
+.remaining {
+  width: 2%;
+  height: 2%;
+  background: blue;
+  padding-bottom:2%;
+  float: left;
+  margin: 0.25%;
+}
+
+#container {
+  margin: 0 auto;
+  max-width: 800px;
+}

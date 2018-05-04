@@ -14,6 +14,8 @@ var judgement_date = document.querySelector("#judgement");
 var submitButton = document.querySelector("#submit");
 
 // square boxes by day, weeks, or months
+var const_day = 1000 * 60 * 60 * 24; // ms in a day
+var const_week = 1000 * 60 * 60 * 24 * 7; // ms in a week
 
 var timeUsed = document.querySelector("#timeUsed");
 var timeLeft = document.querySelector("#timeRemaining");
@@ -40,8 +42,8 @@ submitButton.addEventListener("click", function () {
   console.log(birthdayUtc);
   var judgementUtc = Date.UTC(judgement.getFullYear(), judgement.getMonth(), judgement.getDate());
   console.log(judgementUtc);
-  life = Math.floor((judgementUtc - birthdayUtc) / (1000 * 60 * 60 * 24)); // day
-  var life_weeks = Math.floor(life/7);
+  life = Math.floor((judgementUtc - birthdayUtc) / const_day); // day
+  var life_weeks = Math.floor((judgementUtc - birthdayUtc)) / const_week;
   console.log("real:");
   console.log(life); // days
   console.log(life_weeks); // weeks
@@ -58,15 +60,13 @@ submitButton.addEventListener("click", function () {
 
   var life_completed_output = "";
   for(let i = 0; i < life_completed; ++i) {
-    life_completed_output += "x ";
+    ++life_completed_output;
   }
-
   var life_left_output = "";
   for(let i = 0; i < life_left; ++i) {
-    life_left_output += "o ";
+    ++life_left_output;
   }
 
-  timeUsed.textContent = life_completed_output;
-  timeLeft.textContent = life_left_output;
-
+  timeUsed.textContent = life_completed_output + " days used. ";
+  timeLeft.textContent = life_left_output + " days remaining. ";
 });
