@@ -60,13 +60,15 @@ submitButton.addEventListener("click", function () {
 
   var life_completed_output = "";
   for(let i = 0; i < life_completed; ++i) {
-    ++life_completed_output;
+    //life_completed_output += "tofu" + "<br>";
+    life_completed_output += "<div class = \"completed\"></div>";
   }
   var life_left_output = "";
   for(let i = 0; i < life_left; ++i) {
-    ++life_left_output;
+    //life_left_output += "pizza" + "<br>";
+    life_left_output += "<div class = \"remaining\"></div>";
   }
 
-  timeUsed.textContent = life_completed_output + " days used. ";
-  timeLeft.textContent = life_left_output + " days remaining. ";
+  timeUsed.innerHTML = life_completed_output;
+  timeLeft.innerHTML = life_left_output;
 });
