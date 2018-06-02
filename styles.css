@@ -1,24 +1,10 @@
-.completed {
-  width: 1.5%;
-  height: 1.5%;
-  background: gray;
-  padding-bottom:1.5%;
-  float: left;
-  margin: 0.25%;
-}
-
 img {
   width: 1.5%;
   height: 1.5%;
 }
 
-.remaining {
-  width: 1.5%;
-  height: 1.5%;
-  background: pink;
-  padding-bottom:1.5%;
-  float: left;
-  margin: 0.25%;
+* {
+  font-family: 'Ubuntu Mono', monospace;
 }
 
 #container {

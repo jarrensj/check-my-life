@@ -4,17 +4,19 @@
     <meta charset="utf-8">
     <title>life</title>
     <link rel="stylesheet" type ="text/css" href ="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
   </head>
   <body>
     <h1>life</h1>
+    today's date: <span id="today_date"></span><br><br>
+    <label for ="birthday">start date: </label><input id="birthday" type="date" name="birthday" value="1994-10-06"><br>
+    <small>(ex: birthday)</small><br><br>
+    <label for = "judgement">end date:</label><input id="judgement" type="date" name="judgement"><br>
+    <small>(ex: life expectancy, when you'll turn 50, deadline)</small><br><br>
 
-    <label for ="birthday">start date (ex: birthday)</label>
-    <input id="birthday" type="date" name="birthday" value="1994-10-06"><br>
-    <label for = "judgement">end date (ex: life expectancy, when you'll turn 50)</label>
-    <input id="judgement" type="date" name="judgement"><br>
+    each leaf represents:
     <input type="radio" name="time" value="weeks" id="weeks" checked> weeks
     <input type="radio" name="time" value="days" id="days"> days<br>
-    today's date: <span id="today_date"></span><br>
     <button id="submit">Go</button><br>
     <br>
 
