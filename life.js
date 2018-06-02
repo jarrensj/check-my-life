@@ -35,10 +35,10 @@ submitButton.addEventListener("click", function () {
   var completed_output = "";
   var left_output = "";
   for(let i = 0; i < completed; ++i) {
-    completed_output += "<div class = \"completed\"></div>";
+    completed_output += "<img src = 'img/ink-888888.png'>";
   }
   for(let i = 0; i < left; ++i) {
-    left_output += "<div class = \"remaining\"></div>";
+    left_output += "<img src = 'img/ink-blue.png'>";
   }
 
   timeUsed.innerHTML = completed_output;
