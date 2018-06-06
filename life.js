@@ -2,8 +2,7 @@ var today_date = document.querySelector("#today_date");
 var birthday_date = document.querySelector("#birthday");
 var judgement_date = document.querySelector("#judgement");
 var submitButton = document.querySelector("#submit");
-var timeUsed = document.querySelector("#timeUsed");
-var timeLeft = document.querySelector("#timeRemaining");
+var output = document.querySelector("#output");
 var weeks = document.querySelector("#weeks");
 var days = document.querySelector("#days");
 
@@ -32,15 +31,13 @@ submitButton.addEventListener("click", function () {
   var completed = Math.floor((todayUtc - birthdayUtc) / divideBy);
   var left = Math.floor((judgementUtc - todayUtc) / divideBy);
 
-  var completed_output = "";
-  var left_output = "";
+  var out = "";
   for(let i = 0; i < completed; ++i) {
-    completed_output += "<img src = 'img/ink-888888.png'>";
+    out += "<img src = 'img/ink-888888.png'>";
   }
   for(let i = 0; i < left; ++i) {
-    left_output += "<img src = 'img/ink-blue.png'>";
-  }
+    out += "<img src = 'img/ink-blue.png'>";
 
-  timeUsed.innerHTML = completed_output;
-  timeLeft.innerHTML = left_output;
+  }
+  output.innerHTML = out;
 });
