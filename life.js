@@ -13,7 +13,6 @@ var today = new Date();
 var today_month = ((today.getMonth() + 1) < 10) ? "0" + (today.getMonth() + 1) : (today.getMonth() + 1);
 var today_day = today.getDate();
 var today_year = today.getFullYear();
-today_date.textContent = today_month + '/' + today_day + '/' + today_year;
 
 submitButton.addEventListener("click", function () {
   birthday = birthday_date.value;

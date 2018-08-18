@@ -10,4 +10,9 @@ img {
 #container {
   margin: 0 auto;
   max-width: 90%;
+  text-align: left;
+}
+
+body {
+  text-align: center;
 }
