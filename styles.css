@@ -13,6 +13,16 @@ img {
   text-align: left;
 }
 
+html, body {
+  height: 100%;
+}
+
+html {
+  display: table;
+  margin: auto;
+}
+
 body {
-  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
 }
