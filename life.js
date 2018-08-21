@@ -6,6 +6,7 @@ var resetButton = document.querySelector("#reset");
 var output = document.querySelector("#output");
 var weeks = document.querySelector("#weeks");
 var days = document.querySelector("#days");
+var message = document.querySelector("#message");
 
 var const_day = 1000 * 60 * 60 * 24; // ms in a day
 var const_week = 1000 * 60 * 60 * 24 * 7; // ms in a week
@@ -23,15 +24,21 @@ submitButton.addEventListener("click", function () {
   birthday = new Date(birthday);
   judgement = new Date(judgement);
 
-  if(today < birthday) {
-    alert("error: select a start date prior to today's date");
+  if (!birthday_date.value) {
+    message.innerHTML = "Please fill out the start date field";
   }
-
-  else if(today > judgement) {
-    alert("error: please select an end date after today's date")
+  else if (today < birthday) {
+    message.innerHTML = "Please select a start date prior to today's date";
+  }
+  else if (!judgement_date.value) {
+    message.innerHTML = "Please fill out the end date field";
+  }
+  else if (today > judgement) {
+    message.innerHTML = "Please select an end date after today's date";
   }
 
   else {
+    message.innerHTML = "";
     document.getElementById("form").classList.remove('centered');
 
     var birthdayUtc = Date.UTC(birthday.getFullYear(), birthday.getMonth(), birthday.getDate());
@@ -57,6 +64,7 @@ submitButton.addEventListener("click", function () {
 });
 
 resetButton.addEventListener("click", function () {
+    message.innerHTML = "";
     output.innerHTML = "";
     birthday_date.value = "";
     judgement_date.value = "";
