@@ -4,7 +4,7 @@ img {
 }
 
 * {
-  font-family: 'Ubuntu Mono', monospace;
+  font-family: 'Gaegu', cursive;
 }
 
 #container {
@@ -13,7 +13,7 @@ img {
   text-align: left;
 }
 
-body {
+.center {
   text-align: center;
 }
 
@@ -22,4 +22,12 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+#nav {
+  text-align: right;
+}
+
+a {
+  text-decoration: none;
 }
