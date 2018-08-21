@@ -55,3 +55,12 @@ submitButton.addEventListener("click", function () {
   }
 
 });
+
+resetButton.addEventListener("click", function () {
+    output.innerHTML = "";
+    birthday_date.value = "";
+    judgement_date.value = "";
+    if(!document.getElementById("form").classList.contains('centered')) {
+      document.getElementById("form").classList.add('centered');
+    }
+});
