@@ -7,28 +7,29 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
   </head>
   <body>
-    <h1>checkmy.life</h1>
+    <div id="form" class = "centered">
+      <h1>checkmy.life</h1>
 
-    <label for ="birthday">
-      start date:
-    </label>
-    <input id="birthday" type="date" name="birthday">
-    <br>
+      <label for ="birthday">
+        start date:
+      </label>
+      <input id="birthday" type="date" name="birthday">
+      <br>
 
-    <label for = "judgement">
-      end date:
-    </label>
-    <input id="judgement" type="date" name="judgement">
-    <br>
+      <label for = "judgement">
+        end date:
+      </label>
+      <input id="judgement" type="date" name="judgement">
+      <br>
 
-    <small>each node represents:
-      <input type="radio" name="time" value="weeks" id="weeks" checked> weeks
-      <input type="radio" name="time" value="days" id="days"> days
-    </small>
-    <br>
+      <small>each node represents:
+        <input type="radio" name="time" value="weeks" id="weeks" checked> weeks
+        <input type="radio" name="time" value="days" id="days"> days
+      </small>
+      <br>
 
-    <button id="submit">check</button>
-
+      <button id="submit">check</button>
+    </div>
     <div id="container">
       <span id="output"></span>
     </div>

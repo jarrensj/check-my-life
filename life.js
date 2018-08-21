@@ -15,6 +15,9 @@ var today_day = today.getDate();
 var today_year = today.getFullYear();
 
 submitButton.addEventListener("click", function () {
+
+  document.getElementById("form").classList.remove('centered');
+
   birthday = birthday_date.value;
   judgement = judgement_date.value;
 
