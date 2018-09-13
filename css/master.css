@@ -31,3 +31,7 @@ img {
 a {
   text-decoration: none;
 }
+
+.node:hover {
+  transform: scale(1.50);
+}

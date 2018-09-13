@@ -52,10 +52,10 @@ submitButton.addEventListener("click", function () {
 
     var out = "";
     for(let i = 0; i < completed; ++i) {
-      out += "<img src = 'img/ink-888888.png'>";
+      out += "<img class='node' src = 'img/ink-888888.png'>";
     }
     for(let i = 0; i < left; ++i) {
-      out += "<img src = 'img/ink-blue.png'>";
+      out += "<img class='node' src = 'img/ink-blue.png'>";
 
     }
     output.innerHTML = out;
